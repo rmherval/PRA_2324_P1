@@ -4,13 +4,13 @@
 template <typename T> 
 class List {
     public:
-        void insert(int pos, T e);
-	void prepend(T e);
-	T remove(int pos);
-	T get(int pos);
-	int search(T e);
-	bool empty();
-	int size();
+      virtual void insert(int pos, T e);
+	virtual void prepend(T e);
+	virtual T remove(int pos);
+	virtual T get(int pos);
+	virtual int search(T e);
+	virtual bool empty();
+	virtual int size();
 
 };
 
