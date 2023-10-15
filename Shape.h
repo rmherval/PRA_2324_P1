@@ -15,8 +15,7 @@ class Shape{
   void set_color(std::string c);
   virtual double area() const = 0;
   virtual double perimeter() const = 0;
-  virtual void translate(double incX, double incY)const = 0;
-  virtual void print() const = 0;
+  virtual void translate(double incX, double incY) = 0;
+  virtual void print()  = 0;
 };
 #endif
-
