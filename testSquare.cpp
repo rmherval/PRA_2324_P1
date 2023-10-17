@@ -12,7 +12,7 @@ int main(){
     Square r2("green", vertices);
 
     std::cout << "r1 = " << r1 << std::endl;
-    std::cout << "r1.area() => " << r1.area() << "; r1.perimeter() => " << r1.perimeter() <<  std::endl;
+    std::cout << "r1.area() => " << r1.area() << "; r1.perimeter() => " << r1.perim eter() <<  std::endl;
     std::cout << std::endl;
 
     std::cout << "r2 = " << r2 << std::endl; 

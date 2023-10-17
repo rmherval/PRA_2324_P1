@@ -1,6 +1,3 @@
-
-
-
 #include <ostream>
 #include "List.h"
 
@@ -50,8 +47,13 @@ class ListArray : public  List<T>{
 		max = new_size;
 	}
 
-
-
+T* get(int i) const{
+	if(i<0 || i>=n){
+	throw std::out_of_range("índuce fuera de rango");
+	
+	return &arr[i];
+	}
+}
 	void insert(int pos, T e) override{
 	  if(pos<0 || pos>n){//no válida si fuera del intervalo [0,size()]
 		       throw std::out_of_range("La posición está fuera del rango");

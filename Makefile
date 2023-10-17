@@ -1,3 +1,5 @@
+ListArray.o: ListArray.h List.h
+	g++ -c ListArray.h
 bin/testListArray: testListArray.cpp ListArray.h List.h
 	mkdir -p bin
 	g++ -o bin/testListArray testListArray.cpp ListArray.h 
@@ -36,3 +38,9 @@ bin/testSquare: testSquare.cpp Square.o Shape.o Point2D.o Rectangle.o
 	g++ -c testSquare.cpp
 	mkdir -p bin
 	g++ -o bin/testSquare testSquare.o Square.o Point2D.o Shape.o Rectangle.o
+Drawing.o: Drawing.h Drawing.cpp 
+	g++ -c Drawing.cpp
+	
+bin/testDrawing: testDrawing.cpp Drawing.o Square.o Rectangle.o Circle.o Shape.o Point2D.o
+	mkdir -p bin
+	g++ -o bin/testDrawing testDrawing.cpp Drawing.o Square.o Rectangle.o Circle.o Shape.o Point2D.o
