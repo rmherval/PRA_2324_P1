@@ -73,9 +73,9 @@ class ListLinked : public List<T> {
 	      aux->next=new_node;
 	      
 	    }
-	    n++;
- 	        
 	}
+	 n++;
+    }
        void append(T e) override{
 	 insert(n, e);
        }
@@ -107,7 +107,7 @@ class ListLinked : public List<T> {
         }
 
         n--;
-        return removed_data;
+        return dato;
     }
 	 
   T get(int pos) override{
@@ -121,7 +121,7 @@ class ListLinked : public List<T> {
         for (int i = 0; i < pos; i++) {
                 aux = aux->next;
 	}
-	return aux->data
+	return aux->data;
      
 	  }
   }
