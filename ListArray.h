@@ -7,7 +7,7 @@ class ListArray : public  List<T>{
           T* arr;
           int max;
           int n;
-          static const int MINSIZE = 2;//ESTO ESTA BIEN???????????????????????''
+          static const int MINSIZE = 2;//una vez que pongo un valor a const ya no lo puedo modificar
 	public:
 	  ListArray(){
 	  arr = new T[MINSIZE];//reservar mem dinámica para un array de MINSIZE de elem de tipo entero
@@ -42,7 +42,7 @@ class ListArray : public  List<T>{
 		T* new_arr = new T[new_size];
 		for(int i=0; i<n; i++)
 			new_arr[i] = arr[i];
-		delete[] arr; //DUDA, SI LO ELIMNO PARA QUE QUIERO ACTUALIZAR DONDE APUNTA
+		delete[] arr; //elimino lo que estaba apuntando pq ya no lo necesito
 		arr = new_arr;//actualizar arr para que apunte donde apunta el nuevo
 		max = new_size;
 	}
